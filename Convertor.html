@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="Convertor.css">
+    <style>
+    </style>
+</head>
+
+<body class="dark-mode">
+    <!-- Vertical Navigation Bar - Left Side -->
+    <nav class="vertical-nav">
+        <div class="nav-logo">💱</div>
+        <div class="nav-menu">
+            <a href="#home" class="nav-item">
+                <div class="nav-icon">🏠</div>
+                <span>Home</span>
+                <div class="hover-box">
+                    <h3>🏠 Home</h3>
+                    <p> Welcome to CurrencyExchange</p>
+                    <p> Fast, easy currency conversion for major currencies.</p>
+                    <p> Start converting instantly, no sign-up needed.</p>
+                </div>
+            </a>
+            <a href="#about" class="nav-item">
+                <div class="nav-icon">ℹ️</div>
+                <span>About</span>
+                <div class="hover-box">
+                    <h3>ℹ️ About Us</h3>
+                    <p>CurrencyExchange — Quick & Accurate Currency Conversion</p>
+                    <p>CurrencyExchange is a modern, user-friendly currency conversion tool built with cutting-edge web
+                        technologies.</p>
+                    <p>Built with HTML5, CSS3, and vanilla JavaScript for optimal performance.</p>
+                </div>
+            </a>
+            <a href="#contact" class="nav-item">
+                <div class="nav-icon">📧</div>
+                <span>Contact</span>
+                <div class="hover-box contact-hover-box">
+                    <h3>📧 Contact Information</h3>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-info">
+                            <div class="contact-label">Phone</div>
+                            <div class="contact-value">+91 9761306076</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-info">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">aayushh2507@gmail.com</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-info">
+                            <div class="contact-label">LinkedIn</div>
+                            <div class="contact-value">ayush-kumar-a7075532a</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div class="contact-info">
+                            <div class="contact-label">GitHub</div>
+                            <div class="contact-value">KumarAyush0108</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Horizontal Navigation Bar - Top with Flags -->
+    <nav class="horizontal-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">💱 CurrencyExchange</a>
+            <div class="nav-flags">
+                <div class="flag-item" data-currency="USD">
+                    <span class="flag flag-usa"></span>
+                    <span>United States</span>
+                </div>
+                <div class="flag-item" data-currency="INR">
+                    <span class="flag flag-india"></span>
+                    <span>India</span>
+                </div>
+                <div class="flag-item" data-currency="EUR">
+                    <span class="flag flag-eur"></span>
+                    <span>Europe</span>
+                </div>
+                <div class="flag-item" data-currency="CAD">
+                    <span class="flag flag-canada"></span>
+                    <span>Canada</span>
+                </div>
+                <div class="flag-item" data-currency="AED">
+                    <span class="flag flag-uae"></span>
+                    <span>UAE</span>
+                </div>
+                <div class="flag-item" data-currency="RUB">
+                    <span class="flag flag-russia"></span>
+                    <span>Russia</span>
+                </div>
+                <div class="flag-item" data-currency="AUD">
+                    <span class="flag flag-australia"></span>
+                    <span>Australia</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Stars for dark mode -->
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+
+    <!-- Gentle floating particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="converter">
+        <h2>Currency Converter</h2>
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" min="0" step="any" required placeholder="Enter amount to convert" />
+        </div>
+        <div class="form-group">
+            <label for="from-currency">From:</label>
+            <select id="from-currency">
+                <option value="USD">USD - US Dollar</option>
+                <option value="INR">INR - Indian Rupee</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="CAD">CAD - Canadian Dollar</option>
+                <option value="AED">AED - UAE Dirham</option>
+                <option value="RUB">RUB - Russian Ruble</option>
+                <option value="AUD">AUD - Australian Dollar</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="to-currency">To:</label>
+            <select id="to-currency">
+                <option value="USD">USD - US Dollar</option>
+                <option value="INR">INR - Indian Rupee</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="CAD">CAD - Canadian Dollar</option>
+                <option value="AED">AED - UAE Dirham</option>
+                <option value="RUB">RUB - Russian Ruble</option>
+                <option value="AUD">AUD - Australian Dollar</option>
+            </select>
+        </div>
+        <button id="convert-btn">Convert Currency</button>
+        <div id="result"></div>
+        <div class="error" id="error"></div>
+
+        <!-- Theme Toggle Button (Bottom Right of Converter Card) -->
+        <div class="theme-toggle" id="theme-toggle">
+            <div class="sun-icon"></div>
+            <div class="moon-icon"></div>
+        </div>
+    </div>
+    <script src="Convertor.js"></script>
+</body>
+
+</html>
