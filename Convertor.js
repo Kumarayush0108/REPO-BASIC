@@ -1,4 +1,4 @@
-// THEME TOGGLE with Sun/Moon - Now toggles between dark (default) and light
+// THEME TOGGLE with Sun/Moon 
 const themeToggle = document.getElementById('theme-toggle');
 let isLight = false; // Changed: now light mode is the toggle state
 
@@ -6,32 +6,31 @@ themeToggle.addEventListener('click', function () {
     isLight = !isLight;
     document.body.classList.toggle('light-mode', isLight);
 
-    // Gentle scale animation on click
     this.style.transform = 'scale(0.9)';
     setTimeout(() => {
         this.style.transform = 'scale(1)';
     }, 150);
 });
 
-// Vertical navigation functionality - REMOVED ALERTS
+// Vertical navigation 
 const navItems = document.querySelectorAll('.nav-item');
 navItems.forEach(item => {
     item.addEventListener('click', function (e) {
         e.preventDefault();
         const target = this.getAttribute('href').substring(1);
 
-        // Add click animation
+        
         this.style.transform = 'translateX(10px) scale(0.95)';
         setTimeout(() => {
             this.style.transform = 'translateX(5px) scale(1.05)';
         }, 100);
 
-        // Handle navigation without alerts
+        // Handle navigation without alert
         if (target === 'home') {
             // Reload page for home
             window.location.reload();
         }
-        // About and Contact just show hover effects, no alerts
+        
     });
 });
 
@@ -173,4 +172,5 @@ document.querySelectorAll('input, select').forEach(element => {
     element.addEventListener('blur', function () {
         this.parentElement.style.transform = 'translateY(0) scale(1)';
     });
+
 });
